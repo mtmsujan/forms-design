@@ -68,7 +68,15 @@
                     <label for="date" class="block font-semibold mb-1">Date</label>
                     <input type="date" id="date" class="w-full p-2 border rounded" />
                 </div>
-                
+                <div class="form-field flex-1">
+                    <label for="country" class="block font-semibold mb-1">Country</label>
+                    <select v-model="selectedCountry" id="country" class="w-full p-2 border rounded">
+                        <option>Select Country</option>
+                        <option>Bangladesh</option>
+                        <option>India</option>
+                        <option>Pakistan</option>
+                    </select>
+                </div>
             </div>
             
         </div>
