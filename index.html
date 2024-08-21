@@ -261,7 +261,40 @@
                 </ul>
             </header>
     
-           
+            <main class="mt-4 p-6 bg-white rounded-b-2xl">
+                <h1 class="text-xl font-semibold text-gray-700 text-center">Card Payment</h1>
+                <div class="space-y-4 mt-4">
+                    <input type="text" class="block w-full px-5 py-3 border rounded-lg bg-gray-50 shadow-sm placeholder-gray-400 text-gray-700 focus:ring focus:outline-none" placeholder="Card holder" maxlength="22" x-model="cardholder" />
+    
+                    <input type="text" class="block w-full px-5 py-3 border rounded-lg bg-gray-50 shadow-sm placeholder-gray-400 text-gray-700 focus:ring focus:outline-none" placeholder="Card number" x-model="cardNumber" x-on:keydown="format()" x-on:keyup="isValid()" maxlength="19" />
+    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="w-full">
+                            <label for="" class="text-gray-700 mb-1 block">Expiry Date</label>
+                            <div class="flex gap-2">
+                                <select name="" id="" class="form-select appearance-none block w-full px-4 py-2 border rounded-lg bg-gray-50 shadow-sm placeholder-gray-400 text-gray-700 focus:ring focus:outline-none" x-model="expired.month">
+                                    <option value="" selected disabled>MM</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                </select>
+                                <select name="" id="" class="form-select appearance-none block w-full px-4 py-2 border rounded-lg bg-gray-50 shadow-sm placeholder-gray-400 text-gray-700 focus:ring focus:outline-none" x-model="expired.year">
+                                    <option value="" selected disabled>YY</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </main>
+    
+
         </div>
     </section>    
     
